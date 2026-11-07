@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Daftar Hadir</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="publik">
+  <main class="wrap">
+    <div class="card" id="app">
+      <div class="head">
+        <div class="label">DAFTAR HADIR</div>
+        <h1 id="k-nama">Memuat kegiatan…</h1>
+        <p id="k-info"></p>
+      </div>
+
+      <div id="msg" class="msg" hidden></div>
+
+      <form id="form" novalidate hidden>
+        <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <label>Nama lengkap &amp; gelar <span class="req">*</span><input name="nama" required maxlength="150" autocomplete="name"></label>
+        <label>NIP / NIK<input name="nip" maxlength="30" inputmode="numeric"></label>
+        <label>Instansi <span class="req">*</span><input name="instansi" required maxlength="200" autocomplete="organization"></label>
+        <label>Jabatan<input name="jabatan" maxlength="150"></label>
+        <div class="row">
+          <label>No. HP / WA<input name="hp" maxlength="20" inputmode="tel" autocomplete="tel"></label>
+          <label>Email<input name="email" type="email" maxlength="120" autocomplete="email"></label>
+        </div>
+
+        <div class="sig-wrap">
+          <div class="sig-top"><span>Tanda tangan <span class="req">*</span></span><button type="button" id="clear" class="btn-sm">Hapus</button></div>
+          <canvas id="sig"></canvas>
+          <small>Tanda tangani di dalam kotak menggunakan jari atau mouse.</small>
+        </div>
+
+        <div id="err" class="err" role="alert" hidden></div>
+        <button type="submit" id="send" class="btn btn-primary btn-block">Kirim Kehadiran</button>
+      </form>
+
+      <div id="ok" class="ok" hidden></div>
+    </div>
+    <p class="foot" id="foot"></p>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="assets/common.js"></script>
+  <script src="assets/form.js"></script>
+</body>
+</html>
